@@ -1,0 +1,47 @@
+<style>
+    h1, h2{ 
+        color: blueviolet;
+    }
+    /* Child of .box */
+    .box > p{
+        color: blue;
+    }
+    /* All the element inside the .box */
+    .box li{
+        color: green;
+    }
+
+    li.done{
+        color: rosybrown;
+    }
+
+    ul p.done{
+        color: red;
+        font-size: 24px;
+    }
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS</title>
+    </head>
+    <body>
+        <h1>To Do List</h1>
+        <h2>Monday</h2>
+        <div class="box">
+            <p class="done">Do these things today!</p>
+            <ul class="list">
+                <li>Wash Clothes</li>
+                <li class="done">Read</li>
+                <li class="done">Jog</li>
+            </ul>
+        </div>
+        <ul>
+            <p class="done">The best preparation.</p>
+        </ul>
+        <h5><a href="positioning.html">Next Lesson</a></h5>
+    </body>
+</html>

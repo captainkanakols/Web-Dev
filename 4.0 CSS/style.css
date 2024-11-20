@@ -1,0 +1,23 @@
+.color-container img{
+    height: 150px;
+}
+
+.color-container h2{
+    font-size: 2em;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+.yellow{
+    color: yellow;
+}
+
+.green{
+    color: green;
+}
