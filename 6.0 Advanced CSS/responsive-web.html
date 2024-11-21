@@ -1,0 +1,61 @@
+<style>
+    .grid-container{
+        display: grid;
+        /* how many column 1f = size */
+        grid-template-columns: 1fr 1fr;
+         /*how many rows (height of top is 100px, second is 200px)  */
+        grid-template-rows: 100px 200px 200px;
+        gap: 30px;
+    }
+    .first{
+        grid-column: span 2;
+    }
+
+    .card{
+        background-color: rgb(134, 134, 180);
+    }
+
+    .flex-container{
+        display: flex;
+    }
+
+    .flex-card{
+        background-color: aqua;
+        border: 30px solid rgb(140, 139, 139);
+        height: 100px;
+        flex: 1;
+    }
+    .flex-first{
+        flex:2;
+    }
+    .flex-second{
+        flex: 0.5;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS</title>
+    </head>
+    <body>
+        <h1>Responsive Web</h1>
+        <h2>Grid</h2>
+        <div class="grid-container">
+            <div class="first card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+        <h2>Flexbox</h2>
+        <div class="flex-container">
+            <div class="flex-first flex-card"></div>
+            <div class="flex-second flex-card"></div>
+            <div class="flex-card"></div>
+            <div class="flex-card"></div>
+        </div>
+        <h5><a href="media-query.html">Next Lesson</a></h5>
+    </body>
+</html>
