@@ -1,0 +1,107 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+    *{
+        font-family: "Poppins", sans-serif;
+        color: white;
+    }
+    .pricing-container{
+        background-color: rgb(0, 0, 0);
+        min-height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        padding: 10em;
+    }
+
+    .pricing-plan{
+        border: solid 3px rgb(255, 255, 0);
+        border-radius: 25px;
+        min-width: 20rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2em;
+    }
+
+    .pricing-title{
+        font-size: 3rem;
+
+    }
+
+    .pricing-price{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.5em;
+        line-height: .5;
+    }
+
+    .pricing-btn{
+        margin-top: 60px;
+        height: 50px;
+        width: 200px;
+        background-color: gold;
+        color: black;
+        font-size: 1.2em;
+        border-radius: 5px;
+        transition: .3s;
+    }
+
+    .pricing-btn:hover{
+        background-color: tomato;
+        color: white;
+
+    }
+
+    @media (max-width:1200px) {
+        .pricing-container{
+            flex-direction: column;
+            
+        }
+
+        .pricing-plan{
+            min-width: 25rem;
+        }
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS</title>
+    </head>
+    <body>
+        <!-- Do not use % on min-width for fixed sizes -->
+        <div class="pricing-container">
+            <div class="pricing-plan">
+                <h2 class="pricing-title">Basic</h2>
+                <h3 class="pricing-price">$11.99/month</h3>
+                <h3>✅10GB Storage</h3>
+                <h3>✅1 User</h3>
+                <h3>❌Support</h3>
+                <button class="pricing-btn">Sign Up</button>
+            </div>
+            <div class="pricing-plan">
+                <h2 class="pricing-title">Standard</h2>
+                <h3 class="pricing-price">$19.99/month</h3>
+                <h3>✅50GB Storage</h3>
+                <h3>✅5 User</h3>
+                <h3>✅Phone & Email Support</h3>
+                <button class="pricing-btn">Sign Up</button>
+            </div>
+            <div class="pricing-plan">
+                <h2 class="pricing-title">Premium</h2>
+                <h3 class="pricing-price">$49.99/month</h3>
+                <h3>✅100GB Storage</h3>
+                <h3>✅10 User</h3>
+                <h3>✅24/7 Support</h3>
+                <button class="pricing-btn">Sign Up</button>
+            </div>
+        </div>
+    </body>
+</html>

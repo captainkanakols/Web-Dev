@@ -1,0 +1,100 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+    .main-box{
+        height: 600px;
+        width: 600px;
+        background-color: rgb(172, 172, 228);
+    }
+
+    .top{
+        height: 200px;
+        background-color: rgb(182, 197, 192);
+    }
+
+    .top img{
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+    }
+
+    .middle{
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .socials{
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .icons{
+        font-size: 1.5rem;
+    }
+
+    .button-box{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        margin-top: 1rem;
+    }
+
+    button{
+        height: 2rem;
+        width: 6rem;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .reacts{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    h5::after{
+        content: " |";
+    }
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Card</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main-box">
+            <div class="top">
+                <img src="/6.1 Project/assets/images/beautiful.jpg" >
+            </div>
+            <div class="middle">
+                <h1>Poochi</h1>
+                <h2>Dog and Pupper</h2>
+            </div>
+            <div class="socials">
+                <i class="icons fab fa-facebook"></i>
+                <i class="icons fab fa-instagram"></i>
+                <i class="icons fab fa-twitter"></i>
+                <i class="icons fab fa-linkedin"></i>
+            </div>
+            <div class="button-box">
+                <button>Subscribe</button>
+                <button>Message</button>
+            </div>
+            <div class="reacts">
+                <h5>Likes</h5>
+                <h5>Messages</h5>
+                <h5>Shares</h5>
+            </div>
+        </div>
+    </body>
+</html>
