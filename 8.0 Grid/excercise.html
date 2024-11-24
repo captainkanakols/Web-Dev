@@ -1,0 +1,44 @@
+<style>
+    body{
+        background-color: antiquewhite;
+        color: white;
+    }
+
+    .grid-container{
+        display: grid;
+        /* grid-template-columns: 1fr 400px minmax(200px, 500px);
+        grid-template-rows: repeat(3, 100px) 50px; */
+        grid-template-columns: auto 400px minmax(200px, 500px);
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-auto-rows: 50px;
+        gap: 1em;
+    }
+    .grid-item{
+        background-color: seagreen;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS</title>
+    </head>
+    <body>
+        <H1>GRID TEST</H1>
+        <div class="grid-container">
+            <div class="grid-item">width expands to fill space</div>
+            <div class="grid-item">400px wide</div>
+            <div class="grid-item">min 200px max 500px wide</div>
+            <div class="grid-item">width expands to fill space</div>
+            <div class="grid-item">400px wide</div>
+            <div class="grid-item">min 200px max 500px wide</div>
+            <div class="grid-item">width expands to fill space</div>
+            <div class="grid-item">400px wide</div>
+            <div class="grid-item">min 200px max 500px wide</div>
+            <div class="grid-item">50px high</div>
+        </div>
+
+        <h5><a href="grid-placement.html">Next Lesson</a></h5>
+    </body>
+</html>

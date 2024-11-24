@@ -1,0 +1,87 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        font-family: "Poppins", sans-serif;
+        color: white;
+    }
+    .card{
+        height: 300px;
+        width: 600px;
+        background-color: rgb(43, 42, 42);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .top{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .bottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo{
+        display: flex;
+    }
+
+    .red{
+        height: 50px;
+        width: 50px;
+        background-color: rgba(255, 0, 0, 0.5);
+        border-radius: 25px;
+        margin-right: -10px;
+    }
+
+    .yellow{
+        height: 50px;
+        width: 50px;
+        background-color: rgba(255, 217, 0, 0.5);
+        border-radius: 25px;
+        margin-left: -10px;
+    }
+
+    .card img{
+        height: 30px;
+        width: 50px;
+        border-radius: 5px;
+    }
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CARD</title>
+    </head>
+    <body>
+        <div class="card">
+            <div class="top">
+                <div class="logo">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                </div>
+                <span>Master Card</span>
+                <img src="asset/rfid.JPG" alt="">
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <span>Card Number</span>
+                    <span>0000 1234 5678 9102</span>
+                    <p>Poochi Pokoykoy</p>
+                </div>
+                <div class="right">
+                    <span>Valid Thru</span>
+                    <span>12/24</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<style>
+
+    img{
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        margin: 1em .2em 0 .2em;
+    }
+
+    .img-main{
+        height: 320px;
+        width: 320px;
+        object-fit: cover;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: repeat(5, 150px);
+        gap: 1em;
+    }
+    .grid-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(181, 167, 243);
+    }
+    .side{
+        /* Yess */
+        grid-row: span 3;
+    }
+    .side-a{
+        grid-row: span 3;
+    }
+    .footer{
+        grid-column: span 2;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS</title>
+    </head>
+    <body>
+        <h1>GRID PLACEMENT</h1>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://www.usmagazine.com/wp-content/uploads/2019/11/Celebrities-Who-Became-Memes-01.jpg?quality=86&strip=all" alt="">
+                <p>Nick</p>
+            </div>
+            <div class="side grid-item">
+                <img class="img-main" src="https://imgflip.com/s/meme/Black-Girl-Wat.jpg" alt="">
+            </div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">
+                <img src="https://preview.redd.it/something-always-has-to-go-wrong-with-it-v0-g1xbe9pwkg3d1.jpeg?width=640&crop=smart&auto=webp&s=d349bc34bdbad6b7ae854915a1177d5fd426f84f" alt="">
+                <p>Shrek Rizz</p>
+            </div>
+            <div class="side-a grid-item">5</div>
+            <div class="grid-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROjfDTghEmMns99jBtOkpQrfBN19Xfw4W2Kg&s" alt="">
+                <p>Stonks</p>
+            </div>
+            <div class="footer grid-item"><h5><a href="mondrian.html">NEXT LESSON</a></h5></div>
+        </div>
+    </body>
+</html>

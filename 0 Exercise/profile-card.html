@@ -1,15 +1,21 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     
+    *{
+        font-family: "Poppins", sans-serif;
+        color: white;
+    }
     .main-box{
         height: 600px;
         width: 600px;
         background-color: rgb(172, 172, 228);
+        border-radius: 25px;
     }
 
     .top{
         height: 200px;
         background-color: rgb(182, 197, 192);
+        border-radius: 25px 25px 0 0;
     }
 
     .top img{
@@ -28,38 +34,64 @@
         text-align: center;
     }
 
+    .desc{
+        font-size: 1.2em;
+        line-height: 0;
+    }
+
     .socials{
         display: flex;
         justify-content: center;
         gap: 2.5rem;
+        margin: 3em 0 2em 0;
     }
 
     .icons{
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .bounce:hover {
+    animation: bounce 1s ease-out;
+    cursor: pointer;
+    }
+    @keyframes bounce {
+        0% { transform:translateY(0%); }
+        80% { transform:translateY(-15%); }
+        100% { transform:translateY(-15%); }
     }
 
     .button-box{
         display: flex;
         justify-content: center;
-        gap: 5rem;
+        gap: 2rem;
         margin-top: 1rem;
     }
 
     button{
-        height: 2rem;
-        width: 6rem;
-        border-radius: 5px;
+        height: 2.5rem;
+        width: 7.5rem;
+        border-radius: 25px;
         border: none;
+        color: white;
+        background-color: darkcyan;
+        font-size: 1rem;
+    }
+
+    .btn-cta:hover{
+        background-color: rgb(42, 189, 189);
+        transition: .4s;
     }
 
     .reacts{
+        margin-top: 2em;
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 3rem;
     }
 
-    h5::after{
-        content: " |";
+    .social::after{
+        content: "    |";
+        font-size: 1.5em;
     }
 
 </style>
@@ -74,26 +106,29 @@
     <body>
         <div class="main-box">
             <div class="top">
-                <img src="/6.1 Project/assets/images/beautiful.jpg" >
+                <img src="https://chumley.barstoolsports.com/union/2024/11/20/dc884-17262004042678.06fe99d7.webp?fit=bounds&format=pjpg&auto=webp&quality=85%2C75">
             </div>
             <div class="middle">
-                <h1>Poochi</h1>
-                <h2>Dog and Pupper</h2>
+                <h1 class="">Poochi</h1>
+                <span class="desc">Dog and Pupper</span>
             </div>
             <div class="socials">
-                <i class="icons fab fa-facebook"></i>
-                <i class="icons fab fa-instagram"></i>
-                <i class="icons fab fa-twitter"></i>
-                <i class="icons fab fa-linkedin"></i>
+                <i class="bounce icons fab fa-facebook"></i>
+                <i class="bounce icons fab fa-instagram"></i>
+                <i class="bounce icons fab fa-twitter"></i>
+                <i class="bounce icons fab fa-linkedin"></i>
             </div>
             <div class="button-box">
-                <button>Subscribe</button>
-                <button>Message</button>
+                <button class="btn-cta">Subscribe</button>
+                <button class="btn-cta">Message</button>
             </div>
             <div class="reacts">
-                <h5>Likes</h5>
-                <h5>Messages</h5>
-                <h5>Shares</h5>
+                <i class="social fa-regular fa-heart">  60k</i>
+                <i class="social fa-regular fa-message"> 20k</i>
+                <i class="social fa-solid fa-share"> 20k</i>
+                <!-- <h5>60k Likes</h5>
+                <h5>10k Messages</h5>
+                <h5>12.5k Shares</h5> -->
             </div>
         </div>
     </body>
