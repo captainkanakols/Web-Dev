@@ -5,6 +5,7 @@
         color: rgb(255, 255, 255);
     }
     .card{
+        position: absolute;
         height: 300px;
         width: 600px;
         background-color: rgb(43, 42, 42);
@@ -12,8 +13,16 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        transition: .6s;
         border-radius: 30px;
+        transform-style: preserve-3d;
+        perspective: 100px;
     }
+
+    .card:hover{
+        transform: rotateY(180deg);
+    }
+
 
     .top{
         width: 100%;
@@ -84,7 +93,6 @@
     .right span{
         font-size: 1.2rem;
     }
-
     .card-back{
         height: 300px;
         width: 600px;
@@ -94,6 +102,9 @@
         justify-content: space-around;
         align-items: center;
         border-radius: 30px;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+
     }
     .card-back p{
         font-size: 1rem;
@@ -147,13 +158,15 @@
             </div>
         </div>
         
-        <div class="card-back">
-            <p>For customer service call 082 312 1420 or email at poochi@mastercard.com</p>
-            <div class="stripe">
-                <span class="cvv">032</span>
+        <div class="hidden">
+            <div class="card-back">
+                <p>For customer service call 082 312 1420 or email at poochi@mastercard.com</p>
+                <div class="stripe">
+                    <span class="cvv">032</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sint nemo cum impedit velit.</p>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sint nemo cum impedit velit.</p>
-
         </div>
     </body>
+    
 </html>
