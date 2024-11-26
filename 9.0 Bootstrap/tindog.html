@@ -1,0 +1,221 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    
+    *{
+        font-family: "Poppins", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .gradient-background{
+        background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+        background-size: 180% 180%;
+        animation: gradient-animation 18s ease infinite;
+    }
+
+    @keyframes gradient-animation {
+        0%{
+            background-position: 0% 50%;
+        }
+
+        50%{
+            background-position: 100% 50%;
+        }
+
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+
+    .top{
+        min-height: 75vh;
+        display: flex;   
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .top h2{
+        font-size: 3rem;
+    }
+
+    /*  */
+    .top-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .top-left i{
+        margin-right: 10px;
+        font-size: 1.4rem;
+        
+    }
+
+    .btn{
+        height: 3rem;
+        width: 10rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        transition: .5s ease;
+    }
+
+    .btn:hover{
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255);
+        color: white;
+        cursor: pointer;
+    }
+
+    .btn-container{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+
+    }
+
+    /*  */
+
+    .top-right{
+    }
+
+    .top-right img{
+        object-fit: cover;
+    }
+    
+
+    @media (max-width: 425px) {
+        .top{
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+
+        .top h2{
+            font-size: 2rem;
+        }
+
+        .top-left{
+        
+        }
+
+        .top h2{
+            text-align: center;
+        }
+
+        .btn-container{
+            flex-direction: column;
+            margin: 1rem 0 1rem 0;
+        }
+        .top img{
+            width: 250px;
+        }
+    }
+
+    @media (min-width: 426px) and (max-width: 768px) {
+        .top h2{
+            font-size: 1.8rem;
+        }
+
+        .top-left i{
+            font-size: 1.2rem;
+        }       
+        
+        .btn{
+        margin-top: 2rem;
+        height: 2.5rem;
+        width: 8rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: .5s ease;
+    }
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS</title>
+        <link rel="stylesheet" href="css/tindog.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="title">
+            <div class="gradient-background">
+                <div class="top">
+                    <div class="top-left">
+                        <h2>Meet new and interesting dogs nearby.</h2>
+                        <div class="btn-container">
+                            <button class="btn"><i class="fa-brands fa-apple"></i>Download</button>
+                            <button class="btn"><i class="fa-brands fa-google-play"></i>Download</button>
+                        </div>
+                    </div>
+                    <div class="top-right">
+                        <img src="https://appbrewery.github.io/tindog/images/iphone.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-container">
+                <div class="feature-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="description">
+                        <h3>Easy to use.</h3>
+                        <p>So easy to use, even your dog could do it.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="description">
+                        <h3>Elite Clientele.</h3>
+                        <p>We have all dogs, the greatest dogs.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="description">
+                        <h3>Guaranteed to work.</h3>
+                        <p>Find the love of your dog's life or your money back.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial">
+            <div class="testimonial-container">
+                <div class="testimony-details">
+                    <span>"I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof."</span>
+                </div>
+                <div class="testimony-user">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwfj9Kob2rsNl9SnSGvKiFRwO4WB4L0mjdLA&s" alt="">
+                    <span>Pebbles, New York</span>
+                </div>
+                <div class="testimony-company">
+                    <img src="https://finevpn.org/wp-content/uploads/2024/02/techcrunch-logo-logo.png" alt="">
+                    <img src="https://cdn-ieaed.nitrocdn.com/ePyNvaLWjOMpyDOPHYVJhvpWGLbEOfHx/assets/images/optimized/rev-8e67da7/seo.co/wp-content/uploads/2023/04/09-1.png" alt="">
+                    <img src="https://www.badenbower.com/wp-content/uploads/2024/04/bi_yellow-removebg-preview.png" alt="">
+                    <img src="https://thenextweb.com/wp-content/blogs.dir/1/files/2013/03/TNW_logo_2012.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            
+        </section>
+    </body>
+</html>
