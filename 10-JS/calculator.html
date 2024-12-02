@@ -1,0 +1,47 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS</title>
+    </head>
+    <body>
+        <h1>CALCULATOR</h1>
+        <div class="main">
+            <input type="text" id="fName" placeholder="Enter the your name">
+            <input type="text" id="sName" placeholder="Enter your lover's name">
+            <button onclick="calculate()">Calculate</button>
+            <br>
+            <h2 id="result"></h2>
+            <h3 id="meaning"></h3>
+        </div>
+    </body>
+    <script>
+        function calculate(){
+            var loveResult = Math.floor(Math.random() * 100);
+            document.querySelector("#result").innerHTML = "The love result is "+ loveResult + "%";
+
+            if(loveResult <= 20){
+                document.querySelector("#meaning").innerHTML = "Yikes";
+                document.querySelector("#meaning").style.color = "green";
+            }else if(loveResult <=50){
+                document.querySelector("#meaning").innerHTML = "Ooof";
+                document.querySelector("#meaning").style.color = "red";
+            }else if(loveResult <=80){
+                document.querySelector("#meaning").innerHTML = "Sure";
+                document.querySelector("#meaning").style.color = "pink";
+
+            }else{
+                document.querySelector("#meaning").innerHTML = "Perfect";
+                document.querySelector("#meaning").style.color = "gold";
+
+            }
+        }
+    </script>
+</html>
