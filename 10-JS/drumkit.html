@@ -46,19 +46,42 @@
     <script>
         
         var numberOfDrums = document.querySelectorAll(".drum").length;
-
+        var sound;
         for (var i = 0; i<numberOfDrums; i++){
             if(i === 0){
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
-                    console.log("W")
+                    sound = new Audio('asset/hihat.wav');
+                    sound.play();
                 });
             }else if(i === 1){
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
-                    console.log("A");
+                    sound = new Audio('asset/kick.wav');
+                    sound.play();
                 });
             }else if(i === 2){
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
-                    console.log("S");
+                    sound = new Audio('asset/openhat.wav');
+                    sound.play();
+                });
+            }else if(i === 3){
+                document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+                    sound = new Audio('asset/ride.wav');
+                    sound.play();
+                });
+            }else if(i === 4){
+                document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+                    sound = new Audio('asset/snare.wav');
+                    sound.play();
+                });
+            }else if(i === 5){
+                document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+                    sound = new Audio('asset/tink.wav');
+                    sound.play();
+                });
+            }else if(i === 6){
+                document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+                    sound = new Audio('asset/tom.wav');
+                    sound.play();
                 });
             }
             
