@@ -1,0 +1,76 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        font-family: "Poppins", sans-serif;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS</title>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <div class="main-container">
+            <input type="text" id="number1" placeholder="Enter first number">
+            <input type="text" id="number2" placeholder="Enter second number">
+            <div class="btn-container">
+                <button class="operator">ADD</button>
+                <button class="operator">SUB</button>
+                <button class="operator">MUL</button>
+                <button class="operator">DIV</button>
+            </div>
+            <H2 id="result">RESULT</H2>
+        </div>
+    </body>
+    <script>
+        
+        var btnOperator = document.querySelectorAll(".operator").length;
+        var result = 0;
+
+        for (var i=0; i<btnOperator; i++){
+            
+            if(i === 0){
+                document.querySelectorAll(".operator")[i].addEventListener("click", function(){
+                    var input1 = Number(document.querySelector("#number1").value);
+                    var input2 = Number(document.querySelector("#number2").value);
+                    result = input1 + input2;
+                    document.querySelector("#result").innerHTML = result;
+                });
+            }else if(i === 1){
+                document.querySelectorAll(".operator")[i].addEventListener("click", function(){
+                    var input1 = Number(document.querySelector("#number1").value);
+                    var input2 = Number(document.querySelector("#number2").value);
+                    result = input1 - input2;
+                    document.querySelector("#result").innerHTML = result;
+                });
+            }else if(i === 2){
+                document.querySelectorAll(".operator")[i].addEventListener("click", function(){
+                    var input1 = Number(document.querySelector("#number1").value);
+                    var input2 = Number(document.querySelector("#number2").value);
+                    result = input1 * input2;
+                    document.querySelector("#result").innerHTML = result;
+                });
+            }else if (i === 3){
+                document.querySelectorAll(".operator")[i].addEventListener("click", function(){
+                    var input1 = Number(document.querySelector("#number1").value);
+                    var input2 = Number(document.querySelector("#number2").value);
+                    result = input1 / input2;
+                    document.querySelector("#result").innerHTML = result;
+                });
+            }
+            
+        }
+    </script>
+    </html>
