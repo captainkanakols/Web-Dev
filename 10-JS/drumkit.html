@@ -14,12 +14,16 @@
     button{
         height: 5rem;
         width: 5rem;
-        border: 1px solid black;
+        border: none;
         border-radius: .5rem;
         cursor: pointer;
     }
 
-    button:hover{
+    /* button:hover{
+        background-color: rgb(124, 165, 165);
+    } */
+
+    .pressed{
         background-color: rgb(124, 165, 165);
     }
 </style>
@@ -52,41 +56,58 @@
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
                     sound = new Audio('asset/hihat.wav');
                     sound.play();
+                    AnimateButton(0);
                 });
             }else if(i === 1){
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
                     sound = new Audio('asset/kick.wav');
                     sound.play();
+                    AnimateButton(1);
                 });
             }else if(i === 2){
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
                     sound = new Audio('asset/openhat.wav');
                     sound.play();
+                    AnimateButton(2);
+
                 });
             }else if(i === 3){
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
                     sound = new Audio('asset/ride.wav');
                     sound.play();
+                    AnimateButton(3);
                 });
             }else if(i === 4){
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
                     sound = new Audio('asset/snare.wav');
                     sound.play();
+                    AnimateButton(4);
+
                 });
             }else if(i === 5){
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
                     sound = new Audio('asset/tink.wav');
                     sound.play();
+                    AnimateButton(5);
+
                 });
             }else if(i === 6){
                 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
                     sound = new Audio('asset/tom.wav');
                     sound.play();
+                    AnimateButton(6);
+
                 });
             }
             
-
-            
+            function AnimateButton(i){
+                var btn = document.querySelectorAll(".drum")[i];
+                btn.classList.add("pressed");
+                
+                setTimeout(function(){
+                    btn.classList.remove("pressed");
+                }, 100);
+            }
         }
         
     </script>
