@@ -1,6 +1,10 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+    .title{
+        font-size: 2rem;
+        color: red;
+    }
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,17 +16,60 @@
     </head>
     <body>
         <h1>JQUERY</h1>
+        <!-- <button onclick="change()">Change title</button>
+        <button onclick="revert()">Revert title</button> -->
+
         <button>Click Me</button>
         <button>Click Me</button>
         <button>Click Me</button>
+        <button class="change-text">Click Me</button>
         <button>Click Me</button>
-        <button>Click Me</button>
+        <input type="text">
+        <!-- <a href="https://www.google.com/">Google</a> -->
+
+        <h2>Fade Out</h2>
+        <h3>Slide</h3>
+        <button class="fade">FADE</button>
     </body>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function(){
-            $("h1").css("color", "red");
-            $("button").css("border-radius", "5px");
-        });
+        // $(document).ready(function(){
+        //     $("h1").css("color", "red");
+        //     $("button").css("border-radius", "5px");
+        // });
+        // $("body").css("backgroundColor", "grey");
+    //     function change(){
+    //         $("h1").addClass("title");
+    //     }
+
+    //     function revert(){
+    //         $("h1").removeClass("title");
+    //     }
+
+    //     $(".change-text").text("Yikes");
+    // //  A tag,              value
+    //     $("a").attr("href", "https://www.yahoo.com/");
+
+    $("button").click(function(){
+        $("h1").css("color", "purple");
+    });
+
+    $("input").keypress(function(event){
+        console.log(event.key);
+        $("h1").text(event.key);
+    })
+
+    $("h1").on("mouseover", function(){
+        $("h1").css("color", "green");
+    });
+
+    $("h1").prepend("<button>Prepend</button>");
+    $("h1").append("<button>Append</button>");
+
+    $(".fade").on("click", function(){
+        $("h2").fadeToggle();
+        $("h3").slideUp();
+    })
+
     </script>
 </html>
